@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactoGuardadoActivity">
+
+    <ImageView
+        android:id="@+id/iconNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/textViewNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre Cliente"
+        app:layout_constraintEnd_toStartOf="@id/iconNumero"
+        app:layout_constraintStart_toEndOf="@id/iconNombre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <ImageView
+        android:id="@+id/iconNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/textViewNumero"
+        app:layout_constraintStart_toEndOf="@id/textViewNombre"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_phone" />
+
+    <TextView
+        android:id="@+id/textViewNumero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Número Cliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iconNumero"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <ImageView
+        android:id="@+id/iconProductos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/textViewProductos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconNombre"
+        android:src="@drawable/ic_box" />
+
+    <TextView
+        android:id="@+id/textViewProductos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Productos"
+        app:layout_constraintEnd_toStartOf="@id/iconUbicacion"
+        app:layout_constraintStart_toEndOf="@id/iconProductos"
+        app:layout_constraintTop_toBottomOf="@id/textViewNombre"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <ImageView
+        android:id="@+id/iconUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/textViewUbicacion"
+        app:layout_constraintStart_toEndOf="@id/textViewProductos"
+        app:layout_constraintTop_toBottomOf="@id/iconNumero"
+        android:src="@drawable/ic_location" />
+
+    <TextView
+        android:id="@+id/textViewUbicacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ubicación"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iconUbicacion"
+        app:layout_constraintTop_toBottomOf="@id/textViewNumero"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/buttonLlamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="LLAMAR"
+        app:layout_constraintEnd_toStartOf="@id/buttonWsp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUbicacion"
+        android:drawableStart="@drawable/ic_phone" />
+
+    <Button
+        android:id="@+id/buttonWsp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="WSP"
+        app:layout_constraintEnd_toStartOf="@id/buttonMaps"
+        app:layout_constraintStart_toEndOf="@id/buttonLlamar"
+        app:layout_constraintTop_toBottomOf="@id/textViewUbicacion"
+        android:drawableStart="@drawable/ic_whatsapp" />
+
+    <Button
+        android:id="@+id/buttonMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="MAPS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonWsp"
+        app:layout_constraintTop_toBottomOf="@id/textViewUbicacion"
+        android:drawableStart="@drawable/ic_map" />
+</androidx.constraintlayout.widget.ConstraintLayout>
